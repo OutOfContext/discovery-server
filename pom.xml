@@ -88,6 +88,22 @@
                     </excludes>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>fabric8-maven-plugin</artifactId>
+                <version>4.4.1</version>
+                <configuration>
+                    <mode>openshift</mode>
+                    <resources>
+                        <openshift>
+                            <kind>DeploymentConfig</kind>
+                            <name>${project.artifactId}</name>
+                        </openshift>
+                    </resources>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
